@@ -10,6 +10,7 @@ import java.util.List;
 @Entity
 public class Car {
     private Long id;
+
     private String brand;
     private String model;
     private Energie energie;
