@@ -2,13 +2,17 @@ package com.example.model;
 
 import lombok.Data;
 
-import javax.persistence.Entity;
+import javax.persistence.*;
 import java.awt.*;
+import java.io.Serializable;
 import java.util.List;
 
 @Data
 @Entity
-public class Car {
+@Table(name = "CAR")
+public class Car implements Serializable {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String brand;
@@ -18,7 +22,8 @@ public class Car {
     private Color color;
     private String speedGear;
     private Long mileAge;
-    private List<Picture> pictures;
+    /*@OneToMany
+    private List<Picture> pictures;*/
 
 
 }

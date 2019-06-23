@@ -3,10 +3,12 @@ package com.example.model;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.io.Serializable;
+
 @Data
 @Entity
 @Table(name = "ADRESS")
-public class Adress {
+public class Adress implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
